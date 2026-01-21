@@ -1,2 +1,2 @@
 # kiinbal
-Repositorio del proyecto de vision
+Repositorio del proyecto de vision por computadora
