@@ -23,7 +23,7 @@ jobs:
           LLAVE: ${{ secrets.MI_TOKEN }} # Aquí usa la llave que creamos
         run: |
           # 1. Clonamos tu repo del blog en una carpeta temporal
-          git clone https://$LLAVE@github.com/TU_USUARIO/TU_REPO_BLOG.git temp_blog
+          git clone https://$LLAVE@github.com/danimoradomate/darksidehacker.git temp_blog
           
           # 2. Copiamos los archivos nuevos o imágenes al blog
           # Cambia 'resultados' por la carpeta donde tengas tus fotos
@@ -34,4 +34,3 @@ jobs:
           git add .
           git commit -m "Actualización automática desde el Mega Proyecto" || exit 0
           git push
-          
