@@ -1,0 +1,37 @@
+name: Super Sincronizador
+on:
+  push:
+    branches: [ main ] # Se activa cuando subes algo a la rama principal
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v3
+        with:
+          submodules: true # Esto trae lo del repo de darksidehacker
+          fetch-depth: 0
+
+      - name: Configurar Git
+        run: |
+          git config --global user.name "danimoradomate"
+          git config --global user.email "daniela.morapz@gmail.com"
+
+      - name: Sincronizar con el Blog
+        env:
+          LLAVE: ${{ secrets.MI_TOKEN }} # Aquí usa la llave que creamos
+        run: |
+          # 1. Clonamos tu repo del blog en una carpeta temporal
+          git clone https://$LLAVE@github.com/TU_USUARIO/TU_REPO_BLOG.git temp_blog
+          
+          # 2. Copiamos los archivos nuevos o imágenes al blog
+          # Cambia 'resultados' por la carpeta donde tengas tus fotos
+          cp -r resultados/* temp_blog/assets/img/ || echo "No hay archivos nuevos"
+          
+          # 3. Subimos los cambios al repo del blog
+          cd temp_blog
+          git add .
+          git commit -m "Actualización automática desde el Mega Proyecto" || exit 0
+          git push
+          
