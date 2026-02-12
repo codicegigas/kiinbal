@@ -1,17 +1,5 @@
 # 📷 Configuración de Cámara CSI con Deepstream y YOLO
 
-Este repositorio contiene la implementación técnica para la detección de drones en tiempo real utilizando cámaras CSI y el framework NVIDIA Deepstream en dispositivos Jetson.
-
----
-
-###  1. Lógica y Pseudocódigo
-Antes de la codificación, se estableció el flujo lógico para asegurar una correcta captura de frames y una inferencia de baja latencia.
-![Pseudocódigo](img/pseudocodigo.jpeg)
-
----
-
-### 2. Código de Implementación (`csi.py`)
-El script principal gestiona el Pipeline de GStreamer, configura los sensores CSI y utiliza un **Probe** para extraer metadatos de detección y dibujarlos en pantalla mediante el OSD (On-Screen Display).
 
 ```python
 import sys
@@ -69,6 +57,7 @@ def main():
     print("Iniciando detección de Drones...")
     pipeline.set_state(Gst.State.PLAYING)
     # Loop de ejecución
+```
 
 ### 3. Inicialización del Sistema
 Para arrancar el proyecto, ejecutamos los comandos de inicialización en la terminal de la Jetson. Esto permite cargar las librerías de NVIDIA y el modelo correctamente.
