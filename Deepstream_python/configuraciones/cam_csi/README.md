@@ -71,9 +71,13 @@ def main():
     # Loop de ejecución
 
 ### 3. Inicialización del Sistema
+Para arrancar el proyecto, ejecutamos los comandos de inicialización en la terminal de la Jetson. Esto permite cargar las librerías de NVIDIA y el modelo correctamente.
 
-Para arrancar el proyecto, ejecutamos los comandos de inicialización en la terminal de la Jetson. Esto permite cargar las librerías de NVIDIA y el modelo YOLOv4-tiny correctamente.
+![Inicialización](img/inicializacion.jpeg)
+
+---
 
 ### 4. Prueba de Funcionamiento (Resultado Final)
-
 Captura del sistema operando en tiempo real. Se puede observar el conteo de drones sobre el feed de la cámara CSI gracias a la integración de metadatos en el OSD.
+
+![Prueba de Cámara](img/prueba_camara.jpeg)
