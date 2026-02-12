@@ -1,10 +1,10 @@
-# 🤖 Seguidor de Línea - Etapa 1: Control Manual de Precisión
+# Seguidor de Línea - Etapa 1: Control Manual de Precisión
 
 Este repositorio contiene la implementación técnica de la **Etapa 1** del proyecto de visión por computadora. El objetivo es permitir el manejo manual de una mira robótica mediante servos de alta precisión para realizar pruebas de seguimiento antes de la automatización total.
 
 ---
 
-### 🧠 1. Planeación y Lógica del Sistema
+###  1. Planeación y Lógica del Sistema
 El sistema establece un control robusto y flexible de servos conectados a un ESP32 mediante comunicación TTL, recibiendo comandos desde una NVIDIA Jetson Nano.
 
 **Puntos Clave:**
@@ -16,7 +16,7 @@ El sistema establece un control robusto y flexible de servos conectados a un ESP
 
 ---
 
-### 💻 2. Código de Implementación
+### 2. Código de Implementación
 
 #### A. Control Maestro (Python)
 Interfaz en consola que abre el puerto `/dev/ttyUSB0` y captura teclas en tiempo real (flechas, números y signos) sin necesidad de presionar "Enter".
@@ -26,7 +26,7 @@ Interfaz en consola que abre el puerto `/dev/ttyUSB0` y captura teclas en tiempo
 # Captura secuencias de escape ANSI para las flechas del teclado.
 
 ```
-## 🤖 B. Firmware del Controlador (Arduino/ESP32)
+##  B. Firmware del Controlador (Arduino/ESP32)
 
 Este módulo se encarga de traducir los caracteres recibidos por el puerto serial en movimientos específicos para los servos **STS3215**.
 
@@ -36,7 +36,7 @@ Este módulo se encarga de traducir los caracteres recibidos por el puerto seria
 
 ---
 
-## 🛠️ 3. Hardware Utilizado
+##  3. Hardware Utilizado
 
 Se utiliza la placa **General Driver for Robots** de Waveshare, optimizada para el protocolo de comunicación de los servos de la misma marca.
 
@@ -55,7 +55,7 @@ Se utiliza la placa **General Driver for Robots** de Waveshare, optimizada para 
 
 ---
 
-## 📋 4. Guía de Preparación
+## 4. Guía de Preparación
 
 Según la documentación técnica, los pasos para preparar el entorno son:
 
@@ -66,7 +66,7 @@ Según la documentación técnica, los pasos para preparar el entorno son:
 
 ---
 
-## 📄 5. Documentación Completa (PDF)
+## 5. Documentación Completa (PDF)
 
 Para más detalles sobre la instalación de drivers en Windows/Linux y resultados detallados, consulta el archivo original en la carpeta de documentación:
 
